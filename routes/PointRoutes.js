@@ -14,6 +14,7 @@ router.post('/ipoint', async (req, res) => {
     if(type && coordinates){
         await model.create(Point)
         res.json({message: "Sucesso"})
+        return
     }
 
     res.json({message: "Insira todos os campos"})
